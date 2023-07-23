@@ -39,22 +39,14 @@
 
     <!-- Above is code for the countdown annimation -->
     <div class="container">
-        <nav>
-            <div class="center-image-container">
-                <img src="assets/test_logo.jpg" alt="Test logo for the site" class="center-image-nav">
+        <nav>  
+            <div>
+                <a href="index.html" class="current-page">Home</a>
+                <a href="design.html">Design</a>
+                <a href="code.html">Code</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
             </div>
-            
-    
-            <img src="assets/instagram_logo.png" alt="Test insta logo for the site"  class="right-image-nav">
-            <img src="assets/linkedin_logo.png" alt="Test linkedin logo logo for the site"  class="right-image-nav"> 
-              
-            <ul>
-                <li><a href="index.html" class="current-page">Home</a></li>
-                <li><a href="design.html">Design</a></li>
-                <li><a href="code.html">Code</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-              </ul>
         </nav>
 
         <div class="header">
@@ -68,7 +60,7 @@
         </div>
 
         <div class="hero">
-
+            <img src="assets/backgrounds/KorowaiBackground.jpg"/>
         </div>
         
         
@@ -77,6 +69,62 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, deleniti nostrum eveniet assumenda facilis quis dolor unde? Odit, magnam eum velit ratione corrupti voluptatem optio, doloremque et ipsam nihil atque.</p>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        function startLoader(){
+            let counterElement = document.querySelector(".counter");
+            let currentValue = 0; 
+
+            function updateCounter(){
+                if (currentValue === 100){
+                    return;
+                }
+
+                currentValue += Math.floor(Math.random() * 10) + 1;
+
+                if (currentValue > 100){
+                    currentValue = 100;
+                }
+
+                counterElement.textContent = currentValue;
+
+                let delay = Math.floor(Math.random() * 200) + 50;
+                setTimeout(updateCounter, delay)
+            }
+
+            updateCounter();
+
+        }
+
+        startLoader();
+
+        gsap.to(".bar", 1.5, {
+            delay: 3.5,
+            height: 0,
+            stagger: {
+                amount: 0.5,
+            },
+            ease: "power4.inOut",
+        });
+
+        gsap.to(".counter", 0.25, {
+            delay: 3.5,
+            opacity: 0,
+        });
+
+        gsap.from(".h1", 1.5, {
+            delay: 4,
+            y: 700,
+            stagger: {
+                amount: 0.5,
+            },
+            ease: "power4.inOut",
+        });
+
+        
+    </script>
+
     
     
 </body>
