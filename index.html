@@ -8,12 +8,11 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: 'Roboto Condensed', sans-serif;
-        }
-        h1.a {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Roboto', sans-serif;
         }
     </style>
     
@@ -22,6 +21,7 @@
 </head>
 <body>
     <h1 class="counter">0</h1>
+    <h1 class="te-reo-counter">kore</h1>
 
     <div class="overlay">
         <div class="bar"></div>
@@ -41,14 +41,11 @@
     <!-- Above is code for the countdown annimation -->
     <div class="container">
         <nav>  
-            <div>
+            <div class="nav">
                 <a href="index.html">Home</a>
                 <a href="#about">About</a>
                 <a href="#design">Design</a>
                 <a href="#code">Code</a>
-                <a href="parihaka.html">Parihaka</a>
-                <a href="memnonian.html">Memnonian</a>
-                <a href="gamedesign.html">Game</a>
             </div>
         </nav>
 
@@ -61,11 +58,21 @@
             <div class="h1">O</div>
             <div class="h1">R</div>
             <div class="h1">A</div>
+
+            <img src="assets/hero/feather1.png" class="feather1">
+            <img src="assets/hero/feather2.png" class="feather2">
+            <img src="assets/hero/feather3.png" class="feather3">
+
+            <div class="scroll"></div>
         </div>
+
 
         <section id="about" class="about">
             <div class="abouttext">
+                
                 <h1>About Me</h1>
+                <h2>Ko au</h2>
+                
                 <p>
                     Tena Koe, welcome to my portfolio website!
                 </p>
@@ -86,15 +93,50 @@
 
         <section id="design" class="design">
             <h1>Design</h1>
+            <h2>Hoahoa</h2>
             <div class="designcontainer">
                 <div class="column">
-                    <p>jyghj</p>
+                    <div class="projectcontainer"> 
+                        <img src="assets/about/memnonian.jpg" class="imgcontainer">
+                        <p>
+                            In year 13, I centered my Design portfolio on the story of Parihaka, my maraes rich history. I had the privilege of being honored with the prestigious NZQA Top in Design Award for my work on this in 2020.
+                        </p>
+
+                        <div class="link">
+                            <a href="parihaka.html">Click for Parihaka</a>
+                        </div>
+                        
+
+                    </div>
                 </div>
                 <div class="column">
-                    <p>jyghj</p>
+                    <div class="projectcontainer">
+                        <img src="assets/about/memnonian.jpg" class="imgcontainer">
+                        <p>
+                            Within my responsibilities as a Media Prefect, one of our jobs involved crafting the 2020 yearbook. This project serves as a testament to the unique and inclusive culture prevalent at WEGC.
+                        </p>
+
+                        <div class="link">
+                            <a href="memnonian.html">Click for Memenonian</a>
+                        </div>
+                        
+
+                    </div>
                 </div>
                 <div class="column">
-                    <p>jyghj</p>
+                    <div class="projectcontainer">
+                        <img src="assets/about/memnonian.jpg" class="imgcontainer">
+                        <p>
+                            During the duration of my university degree, aspects of our coursework involved creating games as part of assignments. The following section presents a glimpse into the game designs that I have developed.
+                        </p>
+                        
+                        <div class="link">
+                            <a href="gamedesign.html">Click for Game Design</a>
+                        </div>
+                        
+
+
+                    </div>
                 </div>
             </div>
 
@@ -102,6 +144,7 @@
 
         <section id="code" class="code">
             <h1>Code</h1>
+            <h2>Waehere</h2>
             <p>
                 blah blah blah
             </p>
@@ -114,17 +157,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script>
         let transition = true;
+        const maoriNumbers = ['kore','tahi','rua','toru','whā','rima','ono','whitu','waru','iwa','tekau','tekau mā tahi',
+                            'tekau mā rua','tekau mā toru','tekau mā whā','tekau mā rima','tekau mā ono','tekau mā whitu',
+                            'tekau mā waru','tekau mā iwa','rua tekau','rua tekau mā tahi','rua tekau mā rua','rua tekau mā toru',
+                            'rua tekau mā whā','rua tekau mā rima','rua tekau mā ono','rua tekau mā whitu','rua tekau mā waru','rua tekau mā iwa',
+                            'toru tekau','toru tekau mā tahi','toru tekau mā rua','toru tekau mā toru','toru tekau mā whā','toru tekau mā rima',
+                            'toru tekau mā ono','toru tekau mā whitu','toru tekau mā waru','toru tekau mā iwa',
+                            'whā tekau','whā tekau mā tahi','whā tekau mā rua','whā tekau mā toru','whā tekau mā whā',
+                            'whā tekau mā rima','whā tekau mā ono','whā tekau mā whitu','whā tekau mā waru','whā tekau mā iwa',
+                            'rima tekau','rima tekau mā tahi','rima tekau mā rua','rima tekau mā toru','rima tekau mā whā',
+                            'rima tekau mā rima','rima tekau mā ono','rima tekau mā whitu','rima tekau mā waru',
+                            'rima tekau mā iwa','ono tekau','ono tekau mā tahi','ono tekau mā rua','ono tekau mā toru',
+                            'ono tekau mā whā','ono tekau mā rima','ono tekau mā ono','ono tekau mā whitu','ono tekau mā waru',
+                            'ono tekau mā iwa','whitu tekau','whitu tekau mā tahi','whitu tekau mā rua','whitu tekau mā toru','whitu tekau mā whā',
+                            'whitu tekau mā rima','whitu tekau mā ono','whitu tekau mā whitu','whitu tekau mā waru',
+                            'whitu tekau mā iwa','waru tekau','waru tekau mā tahi','waru tekau mā rua','waru tekau mā toru',
+                            'waru tekau mā whā','waru tekau mā rima','waru tekau mā ono','waru tekau mā whitu',
+                            'waru tekau mā waru','waru tekau mā iwa','iwa tekau','iwa tekau mā tahi','iwa tekau mā rua','iwa tekau mā toru',
+                            'iwa tekau mā whā','iwa tekau mā rima','iwa tekau mā ono','iwa tekau mā whitu','iwa tekau mā waru','iwa tekau mā iwa','kotahi rau'];
 
         function startLoader(){
             let counterElement = document.querySelector(".counter");
+            let teReoCounterElement = document.querySelector(".te-reo-counter");
             let currentValue = 0; 
+            let currentTeReoValue = 'kore';
 
             if (transition === false){
-                    return
+                    return;
                 }
 
             function updateCounter(){
-                
 
                 if (currentValue === 100){
                     return;
@@ -138,6 +200,7 @@
                 }
 
                 counterElement.textContent = currentValue;
+                teReoCounterElement.textContent = maoriNumbers[currentValue];
 
                 let delay = Math.floor(Math.random() * 200) + 50;
                 setTimeout(updateCounter, delay)
@@ -147,8 +210,20 @@
 
         }
 
-        startLoader();
+        window.onscroll = function() {scrollFunction()};
 
+        function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("nav").style.padding = "1vh 1vw";
+            document.getElementById("nav").style.font = "3vw";
+        } else {
+            document.getElementById("nav").style.padding = "3vh 3vw";
+            document.getElementById("nav").style.font = "5vw";
+        }
+        }
+
+        startLoader();
+    
         gsap.to(".bar", 1.5, {
             delay: 3.5,
             height: 0,
@@ -163,8 +238,22 @@
             opacity: 0,
         });
 
+        gsap.to(".te-reo-counter", 0.25, {
+            delay: 3.5,
+            opacity: 0,
+        });
+
         gsap.from(".h1", 1.5, {
             delay: 4,
+            y: 700,
+            stagger: {
+                amount: 0.5,
+            },
+            ease: "power4.inOut",
+        });
+
+        gsap.from(".scroll", 1.5, {
+            delay: 4.5,
             y: 700,
             stagger: {
                 amount: 0.5,
@@ -189,7 +278,7 @@
             scrollTrigger: {
                 trigger: ".design", // Element that triggers the animation
                 start: "top 80%", // Start the animation when the top of .box is 80% in view
-                end: "bottom 20%", // End the animation when the bottom of .box is 20% in view
+                end: "bottom 50%", // End the animation when the bottom of .box is 20% in view
                 scrub: true, // Smoothly animate on scroll (works best with GSAP 3.7+)
             },
         });

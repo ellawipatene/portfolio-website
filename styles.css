@@ -20,7 +20,10 @@ html, body {
   }
 
   h2 {
-    color: white;
+    color: rgb(177, 177, 177);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2vw;
+    margin: -1.6vh 0vh 0vh 0vh;
   }
 
   p {
@@ -73,6 +76,12 @@ html, body {
 
   a {
     color: #eaeaea;
+    text-decoration: none;
+    font-size: 1.6vw;
+  }
+
+  a:hover{
+    color: #bebebe;
     text-decoration: none;
     font-size: 1.6vw;
   }
@@ -136,10 +145,26 @@ html, body {
     align-items: flex-end;
     z-index: 10000;
     color: #ffffff;
-    padding: 0.2em 0.4em;
+    padding: 0.3em 0.4em;
     font-size: 10vw;
     pointer-events: none;
     font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .te-reo-counter{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 10000;
+    color: #9c9c9c;
+    padding: 0.2em 1.1em;
+    font-size: 3.2vw;
+    pointer-events: none;
+    font-family: 'Bebas Neue', sans-serif;
+
   }
 
   section h1{
@@ -154,7 +179,7 @@ html, body {
   }
 
   #design{
-    padding: 5vw 20vw 5vw 0vw;
+    padding: 5vw 38vw 5vw 0vw;
     opacity: 0;
   }
 
@@ -178,5 +203,97 @@ html, body {
     padding: 10px; /* Optional: Add padding for spacing */
     box-sizing: border-box; /* Optional: Include padding in the column width */
 }
-  
-  
+
+.projectcontainer{
+  background-color: #ffffff;
+  height: 48vh;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.imgcontainer{
+  width: 17.2vw;
+  padding: 0.3vw;
+  border-radius: 20px;
+}
+
+.projectcontainer h2{
+  color: #000000;
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 0.5vw 1vw 0.2vw 1vw;
+  font-size: 2vw;
+  margin: 0;
+}
+
+.projectcontainer p{
+  color: #222222;
+  padding: 1vw;
+  font-size: 1vw;
+
+}
+
+.projectcontainer a{
+  color: #000000;
+  padding: 2vw 0vw;
+  font-size: 1vw;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.link{
+  text-align: center;
+  margin: 2vh;
+}
+
+.feather1 {
+  position: absolute; /* Set the image as absolutely positioned */
+  top: 23vh; /* Adjust the 'top' value to set the Y position in pixels */
+  left: 29vw; /* Adjust the 'left' value to set the X position in pixels */
+  width: 10vw;
+}
+
+.feather2 {
+  position: absolute; /* Set the image as absolutely positioned */
+  top: 17vh; /* Adjust the 'top' value to set the Y position in pixels */
+  left: 47vw; /* Adjust the 'left' value to set the X position in pixels */
+  width: 10vw;
+}
+
+.feather3 {
+  position: absolute; /* Set the image as absolutely positioned */
+  top: 40vh; /* Adjust the 'top' value to set the Y position in pixels */
+  left: 62vw; /* Adjust the 'left' value to set the X position in pixels */
+  width: 10vw;
+}
+
+.scroll{
+  position: absolute;
+  height: 8vh;
+  width: 3vw;
+  border: 0.3vw solid #ffffff;
+  top: 85vh;
+  border-radius: 3vw;
+}
+
+.scroll:before{
+  position: absolute;
+  content: "";
+  margin: auto;
+  height: 1vh;
+  width: 0.6vw;
+  left: 0.9vw;
+  top: 1vh;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation: move-down 2s infinite;
+}
+
+@keyframes move-down{
+  80%{
+    opacity: 0.5;
+  }
+  100%{
+    transform: translateY(4vh);
+    opacity: 0;
+  }
+}
