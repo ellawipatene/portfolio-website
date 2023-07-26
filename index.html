@@ -72,6 +72,12 @@
                 
                 <h1>About Me</h1>
                 <h2>Ko au</h2>
+
+        
+                <img src="assets/about/aboutme2.jpg" class="about-img-right">
+                <img src="assets/about/aboutme1.JPEG" class="about-img-left">
+
+               
                 
                 <p>
                     Tena Koe, welcome to my portfolio website!
@@ -87,56 +93,102 @@
     
                 <p>
                     On this website, I look forward to showcasing some of my design and technology projects. Thank you for visiting!
-                </p>    
+                </p>  
+
+                
             </div> 
+            
         </section>
 
         <section id="design" class="design">
             <h1>Design</h1>
             <h2>Hoahoa</h2>
+
+            <p>
+                Ever since high school, I have had a passion for design, which has remained a constant in my life. My journey in the world of design has been both rewarding and fulfilling. 
+                In 2020, I was honored to receive the prestigious NZQA Top in Design award, for my work on my Parihaka Convention Center branding. 
+            </p>  
+            <p>
+                While pursuing my degree in Software Engineering at university, I have found innovative ways to incorporate my design skills into my academic work. 
+                Design is an integral part how I approach problem-solving and creativity in every aspect of my life.
+            </p>
             <div class="designcontainer">
-                <div class="column">
-                    <div class="projectcontainer"> 
-                        <img src="assets/about/memnonian.jpg" class="imgcontainer">
-                        <p>
-                            In year 13, I centered my Design portfolio on the story of Parihaka, my maraes rich history. I had the privilege of being honored with the prestigious NZQA Top in Design Award for my work on this in 2020.
-                        </p>
+                
+                <div class="column1">
+                    <a href="parihaka.html">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="assets/design/parihaka_img_c.jpg" class="imgcontainer-card">
+                            </div>
+                            <div class="contentBx">
+                                <div class="design-text">
+                                    <h2>Parihaka</h2>
+                                    <h3>Parihaka</h3>
+                                    <p>
+                                        In year 13, I centered my Design portfolio on the story of Parihaka, my maraes rich history. 
+                                        <br>
+                                        <br>
+                                        I had the privilege of being honored with the prestigious NZQA Top in Design Award for my work on this in 2020.
+                                    </p>
 
-                        <div class="link">
-                            <a href="parihaka.html">Click for Parihaka</a>
+                                    <p>
+                                        <b>
+                                            Click anywhere in the container to see this portfolio!
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        
+                    </a>
 
-                    </div>
                 </div>
-                <div class="column">
-                    <div class="projectcontainer">
-                        <img src="assets/about/memnonian.jpg" class="imgcontainer">
-                        <p>
-                            Within my responsibilities as a Media Prefect, one of our jobs involved crafting the 2020 yearbook. This project serves as a testament to the unique and inclusive culture prevalent at WEGC.
-                        </p>
+                <div class="column2">
+                    <a href="memnonian.html">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="assets/design/memnonian_img.jpg" class="imgcontainer-card">
+                            </div>
+                            <div class="contentBx">
+                                <div class="design-text">
+                                    <h2 class="h2-mem">Memnonian</h2>
+                                    <h3>Memnonian</h3>
+                                    <p>
+                                        Within my responsibilities as a Media Prefect, one of our jobs involved crafting the 2020 yearbook. This project serves as a testament to the unique and inclusive culture prevalent at WEGC.
+                                    </p>
 
-                        <div class="link">
-                            <a href="memnonian.html">Click for Memenonian</a>
+                                    <p>
+                                        <b>
+                                            Click anywhere in the container to see this portfolio!
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        
-
-                    </div>
+                    </a>
                 </div>
-                <div class="column">
-                    <div class="projectcontainer">
-                        <img src="assets/about/memnonian.jpg" class="imgcontainer">
-                        <p>
-                            During the duration of my university degree, aspects of our coursework involved creating games as part of assignments. The following section presents a glimpse into the game designs that I have developed.
-                        </p>
-                        
-                        <div class="link">
-                            <a href="gamedesign.html">Click for Game Design</a>
+                <div class="column3">
+                    <a href="gamedesign.html">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="assets/design/gamedesign_img.jpg" class="imgcontainer-card">
+                            </div>
+                            <div class="contentBx">
+                                <div class="design-text">
+                                    <h2 class="h2-mem">Game Design</h2>
+                                    <h3 >ameDes</h3>
+                                    <p>
+                                        During the duration of my university degree, aspects of our coursework involved creating games as part of assignments. The following section presents a glimpse into the game designs that I have developed.
+                                    </p>
+
+                                    <p>
+                                        <b>
+                                            Click anywhere in the container to see this portfolio!
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        
-
-
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -210,17 +262,62 @@
 
         }
 
-        window.onscroll = function() {scrollFunction()};
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the floating div element
+            const floatingDiv = document.querySelector(".column1");
 
-        function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("nav").style.padding = "1vh 1vw";
-            document.getElementById("nav").style.font = "3vw";
-        } else {
-            document.getElementById("nav").style.padding = "3vh 3vw";
-            document.getElementById("nav").style.font = "5vw";
-        }
-        }
+            // Create the GSAP animation
+            gsap.to(floatingDiv, {
+                opacity: 1, // Fade the div in when it enters the viewport
+                y: 0, // Move the div to its final position at the top
+                duration: 1, // Animation duration in seconds
+                ease: "power2.out", // Easing function (choose your preferred one)
+                scrollTrigger: {
+                trigger: floatingDiv, // The element to trigger the animation
+                start: "bottom bottom", // When to start the animation
+                end: "top top", // When to end the animation
+                scrub: true, // Smooth scrubbing effect
+                },
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the floating div element
+            const floatingDiv = document.querySelector(".column2");
+
+            // Create the GSAP animation
+            gsap.to(floatingDiv, {
+                opacity: 1, // Fade the div in when it enters the viewport
+                y: 0, // Move the div to its final position at the top
+                duration: 1, // Animation duration in seconds
+                ease: "power2.out", // Easing function (choose your preferred one)
+                scrollTrigger: {
+                trigger: floatingDiv, // The element to trigger the animation
+                start: "bottom bottom", // When to start the animation
+                end: "top top", // When to end the animation
+                scrub: true, // Smooth scrubbing effect
+                },
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the floating div element
+            const floatingDiv = document.querySelector(".column3");
+
+            // Create the GSAP animation
+            gsap.to(floatingDiv, {
+                opacity: 1, // Fade the div in when it enters the viewport
+                y: 0, // Move the div to its final position at the top
+                duration: 1, // Animation duration in seconds
+                ease: "power2.out", // Easing function (choose your preferred one)
+                scrollTrigger: {
+                trigger: floatingDiv, // The element to trigger the animation
+                start: "bottom bottom", // When to start the animation
+                end: "top top", // When to end the animation
+                scrub: true, // Smooth scrubbing effect
+                },
+            });
+        });
 
         startLoader();
     
@@ -282,6 +379,7 @@
                 scrub: true, // Smoothly animate on scroll (works best with GSAP 3.7+)
             },
         });
+
 
         gsap.to(".code", {
             x: 300,
