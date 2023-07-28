@@ -83,7 +83,6 @@ html, body {
   a:hover{
     color: #bebebe;
     text-decoration: none;
-    font-size: 1.6vw;
   }
 
   a.current-page{
@@ -188,6 +187,11 @@ html, body {
     opacity: 0;
   }
 
+  #contact{
+    padding: 5vw 20vw 5vw 0vw;
+    opacity: 0;
+  }
+
   .abouttext{
     width: 60vw;
   }
@@ -203,7 +207,7 @@ html, body {
     flex-basis: 30%; /* Each column occupies 30% of the container's width */
     padding: 10px; /* Optional: Add padding for spacing */
     box-sizing: border-box; /* Optional: Include padding in the column width */
-    opacity: 0;
+    opacity: 0.5;
 }
 
 .projectcontainer{
@@ -388,5 +392,36 @@ html, body {
   position: absolute;
   top: -0.93vh;
   left: -2vw;
+}
+
+footer{
+  bottom: 0; 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-link{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5vw;
+  line-height: 5vw;
+  overflow: hidden;
 }
 

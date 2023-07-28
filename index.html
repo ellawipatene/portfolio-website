@@ -153,7 +153,10 @@
                                     <h2 class="h2-mem">Memnonian</h2>
                                     <h3>Memnonian</h3>
                                     <p>
-                                        Within my responsibilities as a Media Prefect, one of our jobs involved crafting the 2020 yearbook. This project serves as a testament to the unique and inclusive culture prevalent at WEGC.
+                                        Within my responsibilities as a Media Prefect, one of our jobs involved crafting the 2020 yearbook. 
+                                        <br>
+                                        <br>
+                                        This project serves as a testament to the unique and inclusive culture prevalent at WEGC.
                                     </p>
 
                                     <p>
@@ -177,7 +180,10 @@
                                     <h2 class="h2-mem">Game Design</h2>
                                     <h3 >ameDes</h3>
                                     <p>
-                                        During the duration of my university degree, aspects of our coursework involved creating games as part of assignments. The following section presents a glimpse into the game designs that I have developed.
+                                        During the duration of my university degree, aspects of our coursework involved creating games as part of assignments. 
+                                        <br>
+                                        <br>
+                                        The following section presents a glimpse into the game designs that I have developed.
                                     </p>
 
                                     <p>
@@ -201,12 +207,48 @@
                 blah blah blah
             </p>
         </section>
+
+        <section id="contact" class="contact">
+            <h1>Contact</h1>
+            <h2>tūtakitaki</h2>
+
+
+
+        </section>
+
+        <div class="wrapper">        
+            <div class="link-container">
+                <div>
+                    <a href="#" class="contact-link">Instagram</a>
+                </div>
+                <div>
+                    <a href="#" class="contact-link">Github   </a>
+                    <a href="#" class="contact-link">  Email-Me</a>
+                </div>
+                <div>
+                    <a href="#" class="contact-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="email"> 
+                <a href="#">ellawipatene@gmail.com</a>
+            </div>
+            <div class="location">
+                <a href="#">Wellington, New Zealand</a>
+            </div>
+
+        </footer>
+
     </div>
 
    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script>
         let transition = true;
         const maoriNumbers = ['kore','tahi','rua','toru','whā','rima','ono','whitu','waru','iwa','tekau','tekau mā tahi',
@@ -319,6 +361,10 @@
             });
         });
 
+
+        
+
+
         startLoader();
     
         gsap.to(".bar", 1.5, {
@@ -386,6 +432,17 @@
             opacity: 1,
             scrollTrigger: {
                 trigger: ".code", // Element that triggers the animation
+                start: "top 80%", // Start the animation when the top of .box is 80% in view
+                end: "bottom 20%", // End the animation when the bottom of .box is 20% in view
+                scrub: true, // Smoothly animate on scroll (works best with GSAP 3.7+)
+            },
+        });
+
+        gsap.to(".contact", {
+            x: 300,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".contact", // Element that triggers the animation
                 start: "top 80%", // Start the animation when the top of .box is 80% in view
                 end: "bottom 20%", // End the animation when the bottom of .box is 20% in view
                 scrub: true, // Smoothly animate on scroll (works best with GSAP 3.7+)
