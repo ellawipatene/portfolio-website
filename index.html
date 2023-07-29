@@ -208,14 +208,6 @@
             </p>
         </section>
 
-        <section id="contact" class="contact">
-            <h1>Contact</h1>
-            <h2>tūtakitaki</h2>
-
-
-
-        </section>
-
         <div class="wrapper">        
             <div class="link-container">
                 <div>
@@ -234,12 +226,11 @@
 
         <footer>
             <div class="email"> 
-                <a href="#">ellawipatene@gmail.com</a>
+                <a href="#">© Ella Wipatene 2023</a>
             </div>
             <div class="location">
                 <a href="#">Wellington, New Zealand</a>
             </div>
-
         </footer>
 
     </div>
@@ -405,7 +396,7 @@
         });
 
         gsap.to(".about", {
-            x: 300,
+            x: "20vw",
             opacity: 1,
             scrollTrigger: {
                 trigger: ".about", // Element that triggers the animation
@@ -416,7 +407,7 @@
         });
 
         gsap.to(".design", {
-            x: 300,
+            x: "20vw",
             opacity: 1,
             scrollTrigger: {
                 trigger: ".design", // Element that triggers the animation
@@ -428,7 +419,7 @@
 
 
         gsap.to(".code", {
-            x: 300,
+            x: "20vw",
             opacity: 1,
             scrollTrigger: {
                 trigger: ".code", // Element that triggers the animation
@@ -438,17 +429,16 @@
             },
         });
 
-        gsap.to(".contact", {
-            x: 300,
+        gsap.to(".wrapper", {
+            x: 0,
             opacity: 1,
             scrollTrigger: {
-                trigger: ".contact", // Element that triggers the animation
+                trigger: ".wrapper", // Element that triggers the animation
                 start: "top 80%", // Start the animation when the top of .box is 80% in view
-                end: "bottom 20%", // End the animation when the bottom of .box is 20% in view
+                end: "bottom 80%", // End the animation when the bottom of .box is 20% in view
                 scrub: true, // Smoothly animate on scroll (works best with GSAP 3.7+)
             },
         });
-
         
     </script>
 

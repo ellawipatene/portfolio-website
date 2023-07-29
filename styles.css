@@ -400,14 +400,22 @@ footer{
   display: flex;
   justify-content: space-between;
   padding: 2em;
+  
+}
+
+footer a{
+  font-family: 'Bebas Neue', sans-serif;
+  color: #797979;
+  font-size: 1.5vw;
 }
 
 .wrapper{
   width: 100vw;
-  height: 100vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
 }
 
 .link-container{
