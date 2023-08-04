@@ -63,6 +63,7 @@
             <img src="assets/hero/feather1.png" class="feather1">
             <img src="assets/hero/feather2.png" class="feather2">
             <img src="assets/hero/feather3.png" class="feather3">
+            <img src="assets/hero/spiral.png" class="spiral">
 
             <div class="scroll"></div>
         </div>
@@ -423,6 +424,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script>
+        const spinImage = document.querySelector(".spiral");
+
+        window.addEventListener("scroll", () => {
+        const rotation = window.scrollY * 0.1; // Adjust the speed of rotation
+        spinImage.style.transform = `rotate(${rotation}deg)`;
+        });
+    </script>
+    <script>
         function cardCarousel3d(carousels){
         var rotateHandler = function(evt) {
             var carousel = this.parentElement;
@@ -641,6 +650,15 @@
         gsap.from(".scroll", 1.5, {
             delay: 4.5,
             y: 700,
+            stagger: {
+                amount: 0.5,
+            },
+            ease: "power4.inOut",
+        });
+
+        gsap.from(".spiral", 4, {
+            delay: 4,
+            opacity: 0,
             stagger: {
                 amount: 0.5,
             },

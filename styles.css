@@ -276,6 +276,15 @@ html, body {
   width: 10vw;
 }
 
+.spiral {
+  position: absolute; /* Set the image as absolutely positioned */
+  top: 6vh; /* Adjust the 'top' value to set the Y position in pixels */
+  left: 20vw; /* Adjust the 'left' value to set the X position in pixels */
+  width: 60vw;
+  opacity: 0.8;
+  transition: transform 0.5s ease;
+}
+
 .scroll{
   position: absolute;
   height: 8vh;
