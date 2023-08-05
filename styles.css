@@ -663,6 +663,13 @@ display: block !important;
   font-size: 1vw;
 }
 
+.column-skills a{
+  padding: 0px;
+  font-size: 1vw;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 
 
 
